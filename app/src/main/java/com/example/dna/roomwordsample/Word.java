@@ -1,6 +1,7 @@
 package com.example.dna.roomwordsample;
 
 import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
@@ -8,7 +9,7 @@ import android.support.annotation.NonNull;
 public class Word {
 
     @PrimaryKey(autoGenerate = true)
-    private int id;
+    public int id;
 
     @NonNull
     public String word;
