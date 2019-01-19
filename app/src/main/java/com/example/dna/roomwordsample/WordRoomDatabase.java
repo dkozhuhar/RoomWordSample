@@ -6,12 +6,12 @@ import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
 
-@Database(entities = {Word.class}, version = 1)
+@Database(entities = {Word.class}, version = 2)
 public abstract class WordRoomDatabase extends RoomDatabase {
     private static volatile WordRoomDatabase INSTANCE;
     public abstract WordDao wordDao();
     // Hiding constructor to make Singleton
-    private WordRoomDatabase() {}
+
     public static WordRoomDatabase getWordDatabase(final Context context) {
         if (INSTANCE == null){
             synchronized (WordRoomDatabase.class) {
