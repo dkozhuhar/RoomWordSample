@@ -13,5 +13,11 @@ public class Word {
 
     @NonNull
     public String word;
+
+
+    public Word(String word){
+        this.word = word;
+        //this.id = id;
+    }
 //..other fields, getters, setters
 }
